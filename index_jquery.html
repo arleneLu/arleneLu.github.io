@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>jQuery版本</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+  <!-- 最外层的容器 -->
+  <div class="index-layout">
+    <!-- 顶部 -->
+    <header>
+      <!--a[href='javascript:void(0)'].logo+input[type='search']+a[href='javascript:void(0)'].login-->
+      <a href="javascript:void(0)" class="logo"></a>
+      <span class='glass'></span>
+      <input type="search" placeholder="请输入搜索的内容哦">
+      <a href="javascript:void(0)" class="login">登录</a>
+    </header>
+
+    <!-- 轮播图 -->
+    <!--ul>li*8>a[href='javascript:void(0)']>img[src='images/l$.jpg']-->
+    <div class="index-banner">
+      <!-- 轮播图片 -->
+      <ul class='banner-imgs clearfix'>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l1.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l2.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l3.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l4.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l5.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l6.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l7.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l8.jpg" alt=""></a>
+        </li>
+      </ul>
+
+      <!--  轮播的小圆点 -->
+      <!--ol.clearfix>li.fl*8-->
+      <ol class="clearfix">
+        <li class="fl current"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+      </ol>
+    </div>
+
+    <!-- 导航区域 -->
+    <!--.index-nav>ul>li*8>a[href='javascript:void(0)']>img[src='images/nav$.png']+p{分类查询}-->
+    <div class="index-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav0.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav1.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav2.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav3.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav4.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav5.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav6.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav7.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!--  内容区域 -->
+    <div class="index-main">
+      <!-- 秒杀区域 -->
+      <section class='secondKill'>
+
+        <div class="top">
+          <div class="secKill-left">
+            <span class='clock'></span>
+            <span class='handSecKill'>掌上秒杀</span>
+            <ul>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+            </ul>
+          </div>
+          <div class="secKill-right">
+            <a href="javascript:void(0)">更多&gt;</a>
+          </div>
+        </div>
+        <!-- 底部布局 -->
+        <div class="bottom">
+          <!--ul>li*3>a[href='javascript:void(0)']>img[src='images/detail01.jpg']+^(p{￥10.00}+p{￥100.00})-->
+          <ul>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail02.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 除了秒杀区域之外的 部分 -->
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br' href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fr bl' href="javascript:void(0)"><img src="images/cp4.jpg" alt=""></a>
+          <a class='fl bb' href="javascript:void(0)"><img src="images/cp5.jpg" alt=""></a>
+          <a class='fl' href="javascript:void(0)"><img src="images/cp6.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br' href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<!-- 导入 jQuery -->
+<script type="text/javascript" src="lib/jQuery/jquery-3.1.1.min.js"></script>
+
+<!-- 当前页面的 jQuery代码
+    jQuery 入口函数 $(function(){})
+
+    jQuery使用注意 功能基本都是 方法
+    jQuery的使用精髓  获取元素 操纵他们
+
+    移动端开发 可以使用jQuery 
+      虽然 jQuery比较大 但是 第一次 下载之后 如果 页面中 使用的jQuery版本没有发生更改
+      用户的浏览器就会缓存 第二次 不会再次下载
+    jQuery 功能强大 但是移动端开发时 可能只用到了其中的 某几个功能
+      为了解决 这个问题 有人 写了一个 模块化的 jQuery
+    zepto
+      功能跟jQuery基本一样 语法 基本一样
+      只不过 把功能拆分到了 多个 模块中
+      就是 一个个的 js文件 用到了那个模块 就导入哪个js即可
+ -->
+<script type="text/javascript">
+  $(function () {
+    /*
+        需求：
+          滚动的时候
+          更改 header的透明度 
+          滚动到 轮播图的高度之后 透明度 就不再更改了
+          透明度最大 .8
+        伪代码：
+          页面打开时 把透明度 变为 0
+          获取header dom元素
+          获取轮播图的高度
+          滚动的时候--滚动事件
+            获取 滚动的距离
+            计算透明度 并设置给dom元素  滚动距离 / 最大的距离
+            获取header.style.backgroundColor = rgba()
+      */
+    // 默认变为透明
+    $('header').css('backgroundColor', 'rgba(201, 21, 35,0)');
+    $(window).on('scroll', function () {
+      var alpha = $('body').scrollTop() / $('.index-banner').height()
+      console.log(alpha);
+      if (alpha > 0.8) {
+        alpha = 0.8;
+      }
+      $('header').css('backgroundColor', 'rgba(201, 21, 35,' + alpha + ')');
+    })
+    /*
+        需求
+          每隔一段时间
+            递减1
+            修改html页面中的显示
+        伪代码
+          这里写死一个时间 5个小时
+          获取需要修改的dom元素
+          定时器 setInterval
+            时间递减
+            时间没有 要提示用户 错过了机会哦
+            格式化为 时分秒
+            设置给 页面中的html元素
+    */
+    var totalSec = 5 * 60 * 60;
+    var interId = setInterval(function () {
+      totalSec--;
+
+      if (totalSec < 0) {
+        // 清除定时器
+        clearInterval(interId);
+        // 提示用户 错过了机会
+        // 移动端 是可以使用 alert弹框
+        alert('亲,这一次的抢购没有了哦,😍,下一次可以再来嘛');
+        // 防止后续代码执行
+        return;
+      }
+
+      // 格式化
+      // 带入 具体的数字进行计算 方便 想出计算方法  3888秒进去  3888 / 3600 = 1.x
+      var hour = Math.floor(totalSec / 3600);
+
+      //3888秒进去  3888 % 3600 = 288  / 60 = 4.x
+      var minute = Math.floor(totalSec % 3600 / 60);
+
+      // 3888秒进去 3888 % 60 = 比 60小的数值
+      var second = totalSec % 60;
+
+      //  设置元素的内容
+      $('.secKill-left ul li').eq(0).html(Math.floor(hour / 10));
+      $('.secKill-left ul li').eq(1).html(Math.floor(hour % 10));
+      $('.secKill-left ul li').eq(3).html(Math.floor(minute / 10));
+      $('.secKill-left ul li').eq(4).html(Math.floor(minute % 10));
+      $('.secKill-left ul li').eq(6).html(Math.floor(second / 10));
+      $('.secKill-left ul li').eq(7).html(Math.floor(second % 10));
+    }, 1)
+
+  })
+</script>

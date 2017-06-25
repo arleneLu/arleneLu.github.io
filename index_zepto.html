@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>zepto版本</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+  <!-- 直接 编写 css 覆盖 index.css -->
+  <style>
+    .index-banner .banner-imgs {
+      width: 1000%;
+      /*  默认 往左边 去 一倍的屏幕宽度 */
+      transform: translateX(-10%);
+    }
+
+    .index-banner .banner-imgs li {
+      /* 宽度变为 1/10即可 */
+      width: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 最外层的容器 -->
+  <div class="index-layout">
+    <!-- 顶部 -->
+    <header>
+      <!--a[href='javascript:void(0)'].logo+input[type='search']+a[href='javascript:void(0)'].login-->
+      <a href="javascript:void(0)" class="logo"></a>
+      <span class='glass'></span>
+      <input type="search" placeholder="请输入搜索的内容哦">
+      <a href="javascript:void(0)" class="login">登录</a>
+    </header>
+
+    <!-- 轮播图 -->
+    <!--ul>li*8>a[href='javascript:void(0)']>img[src='images/l$.jpg']-->
+    <div class="index-banner">
+      <!-- 轮播图片 -->
+      <ul class='banner-imgs clearfix'>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l8.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l1.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l2.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l3.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l4.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l5.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l6.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l7.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l8.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l1.jpg" alt=""></a>
+        </li>
+      </ul>
+
+      <!--  轮播的小圆点 -->
+      <!--ol.clearfix>li.fl*8-->
+      <ol class="clearfix">
+        <li class="fl current"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+      </ol>
+    </div>
+
+    <!-- 导航区域 -->
+    <!--.index-nav>ul>li*8>a[href='javascript:void(0)']>img[src='images/nav$.png']+p{分类查询}-->
+    <div class="index-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav0.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav1.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav2.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav3.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav4.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav5.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav6.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav7.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!--  内容区域 -->
+    <div class="index-main">
+      <!-- 秒杀区域 -->
+      <section class='secondKill'>
+
+        <div class="top">
+          <div class="secKill-left">
+            <span class='clock'></span>
+            <span class='handSecKill'>掌上秒杀</span>
+            <ul>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+            </ul>
+          </div>
+          <div class="secKill-right">
+            <a href="javascript:void(0)">更多&gt;</a>
+          </div>
+        </div>
+        <!-- 底部布局 -->
+        <div class="bottom">
+          <!--ul>li*3>a[href='javascript:void(0)']>img[src='images/detail01.jpg']+^(p{￥10.00}+p{￥100.00})-->
+          <ul>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail02.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 除了秒杀区域之外的 部分 -->
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br' href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fr bl' href="javascript:void(0)"><img src="images/cp4.jpg" alt=""></a>
+          <a class='fl bb' href="javascript:void(0)"><img src="images/cp5.jpg" alt=""></a>
+          <a class='fl' href="javascript:void(0)"><img src="images/cp6.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br' href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- 导入 对应的模块 -->
+<!-- 核心模块 -->
+<script type="text/javascript" src="lib/zepto/zepto.js"></script>
+<!-- 事件模块 -->
+<script type="text/javascript" src="lib/zepto/event.js"></script>
+<!-- touch模块 -->
+<script type="text/javascript" src="lib/zepto/touch.js"></script>
+
+<!-- 动画模块 -->
+<script type="text/javascript" src="lib/zepto/fx.js"></script>
+<!-- 自己的 js代码 -->
+<script type="text/javascript">
+  /*
+                                需求 1.
+                                  手指 往左拨动轮播图时
+                                    轮播图中的图片 往左边 走一张
+                                    移动时需要动画效果
+                                      移动完毕时 把轮播图的 索引图标 修改一下
+                                需求 2.
+                                  手指 往右拨动轮播图时
+                                    轮播图中的图片 往右边 走一张
+                                    移动时需要动画效果
+                                      移动完毕时 把轮播图的 索引图标 修改一下
+                                需求3
+                                  使用定时器 自动轮播
+                                    定时器  index ++ 调用 autoMove即可
+                                需求4
+                                  手指拨动时 清除定时器
+                                  移动结束之后   开启定时器  回掉函数
+                          */
+  $(function () {
+    // 定义变量 保存 拨动的次数
+    // var index = 0; 由于 我们调整了 图片的张数 默认已经走了 10% 所以这里 从 1开始
+    var index = 1;
+    // 获取 屏幕的宽度
+    var moveWidth = $('.index-banner').width()
+
+    // 自动轮播
+    var interId = setInterval(function () {
+      // 修改索引值
+      index++;
+      // 调用 自动切换的方法
+      autoMove();
+    }, 1000)
+
+    $('.index-banner').swipeLeft(function () {
+      // 关闭定时器
+      clearInterval(interId);
+      console.log('左边');
+      index++;
+      // 调用 autoMove即可
+      autoMove();
+    })
+
+    // 往右边滑动
+    $('.index-banner').swipeRight(function () {
+      console.log('右边');
+      // 关闭定时器
+      clearInterval(interId);
+      index--;
+      // 调用 autoMove
+      autoMove();
+    })
+
+    // 根据 index  移动轮播图 图片的 代码 抽取
+    var autoMove = function () {
+      // 移动 图片
+      // 定位 一般设置的是 元素默认的位置 移动的时候 建议使用 变换transform
+      $('.banner-imgs').animate({
+        "transform": "translateX(" + index * -moveWidth + "px)"
+      }, 500, function () {
+
+        // 再次 开启 定时器
+        interId = setInterval(function () {
+          index++;
+          autoMove();
+        }, 1000)
+
+        // 添加 判断是否到 最后一张 或者是 第一张的 跳转代码
+        // 轮播图片 有 10张 0 1 2 3 4 5 6 7 8 9
+        // 索引li标签有8个    0 1 2 3 4 5 6 7
+        if (index >= 9) {
+          index = 1;
+          // 直接 修改 transform 让他回去 
+          // $('.banner-imgs').css('transform','translateX('+index * -moveWidth+'px)');
+        } else if (index <= 0) {
+          index = 8;
+          // 直接 修改 transform 让他回去 
+          // $('.banner-imgs').css('transform','translateX('+index * -moveWidth+'px)');
+        }
+        $('.banner-imgs').css('transform', 'translateX(' + index * -moveWidth + 'px)');
+
+
+
+        // 移动完毕之后 会触发这里哦
+        console.log('我动完了');
+        // 先删除 ol 所有li标签的  current class
+        $('.index-banner ol li').removeClass('current');
+        // 对应的 li标签 添加 current的 class
+        //  因为 index  已经改为从1 开始 刚好差了一位
+        $('.index-banner ol li').eq(index - 1).addClass('current');
+      })
+    }
+  })
+</script>

@@ -1,0 +1,273 @@
+// normalize 是 第三方的 初始化样式
+@import 'normalize.scss';
+// 自己的 base中 可能会重写一部分
+@import 'base.scss';
+// 写在index中 后面使用 会有提示
+// 变量 京东红
+$jdRed:rgb(201, 21, 35);
+// 设置顶部搜索栏的样式
+header {
+    height: 40px;
+    position: relative; // 使用京东红
+    background-color: $jdRed;
+    padding: 0 60px;
+    a {
+        color: white;
+        line-height: 40px;
+        position: absolute;
+        top: 0;
+    }
+    a.logo {
+        // sass 如果计算之后 想要添加 单位 可以在 最后乘以 具体的值即可
+        top: (40-21)/2*1px;
+        left: 0;
+        width: (114px/2);
+        height: (42px/2);
+        background-image: url('../images/sprites.png');
+        background-repeat: no-repeat;
+        background-position: 0 (-218px/2);
+        background-size: 200px 200px;
+    }
+    a.login {
+        right: 15px;
+    }
+    input {
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        border-radius: 15px;
+        padding-left: 40px;
+    } // 放大镜
+    span.glass {
+        background-image: url('../images/sprites.png');
+        background-repeat: no-repeat;
+        background-position: (-118px/2) (-218px/2);
+        background-size: 200px 200px;
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        top:(40-21)/2*1px;
+        left:(130px/2);
+    }
+}
+
+// 轮播图
+.index-banner {
+    // 溢出隐藏 避免滚动
+    overflow: hidden;
+    position: relative;
+    .banner-imgs {
+        // ul标签 作为容器 横向 需要放置8个
+        // 每一个 宽度要跟 屏幕宽度一致
+        width: 800%;
+        li {
+            // 1/8的ul的宽度
+            width: 12.5%;
+            float: left;
+            a {
+                width: 100%;
+                display: block;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    } // 轮播的小圆点
+    ol {
+        position: absolute;
+        bottom: 5px;
+        left: 50%; // margin-left: -50%;
+        transform: translateX(-50%);
+        li {
+            // 变为圆形 
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            margin-right: 5px; // 被选中的li标签 一些特殊的样式
+            &.current {
+                background-color: yellowgreen;
+            }
+        }
+    }
+}
+
+// 导航区域
+.index-nav {
+    ul {
+        // 弹性布局 实现一行4个
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        li {
+            width: 25%; // 一行4个
+            a {
+                width: 100%;
+                display: block;
+                img {
+                    // img 不要撑满一格
+                    display: block;
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                p {
+                    // 文字居中 小一点， 淡一点
+                    font-size: 12px;
+                    text-align: center;
+                    color: gray;
+                    padding: 10px 0 15px;
+                }
+            }
+        }
+    }
+}
+
+// 设置 主体内容部分的 统一样式
+.index-main {
+    padding: 0 5px;
+    background-color: #F5F5F5;
+    overflow: hidden;
+    section {
+        margin-top: 10px; // 最起码这么高 能够被撑开
+        min-height: 100px;
+        background-color: white;
+        .top {
+            height: 32px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+    } // 秒杀区域的样式
+    section.secondKill {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+            .secKill-left {
+                // 元素 就会一行显示
+                display: flex;
+                align-items: center;
+                span.clock {
+                    color: black;
+                    margin-right: 5px;
+                    background-image: url('../images/seckill-icon.png');
+                    background-size: 20px 25px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 25px;
+                }
+                span.handSecKill {
+                    color: $jdRed;
+                    margin-right: 5px;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        background-color: black;
+                        color: white;
+                        font-size: 14px;
+                        text-align: center;
+                        margin-right: 2px;
+                        padding: 0 2px; // line-height: 
+                    }
+                    li:nth-child(3n) {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+            .secKill-right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+        } // 秒杀区域底部
+        .bottom {
+            ul {
+                display: flex;
+                padding-top: 10px;
+                li {
+                    flex: 1;
+                    a {
+                        width: 100%;
+                        display: block;
+                        img {
+                            width: 50%;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                        font-size: 12px;
+                        padding: 5px 0;
+                    } // 第一个p
+                    p:first-of-type {
+                        color: $jdRed;
+                    } // 最后一个个p
+                    p:last-of-type {
+                        color: gray;
+                        text-decoration: line-through;
+                    }
+                } // 为索引为 2的li标签中的 a标签 设置左右边框
+                li:nth-child(2) {
+                    a {
+                        border-right: 1px solid yellowgreen;
+                        border-left: 1px solid #666;
+                    }
+                }
+            }
+        }
+    } // 普通section中的 样式
+    section {
+        .top {
+            padding-left: 5px;
+            position: relative;
+            h3 {
+                font-size: 15px;
+                color: gray;
+                font-weight: normal;
+                padding-left: 10px;
+                border-left: 3px solid $jdRed;
+                position: absolute; // sass 是支持 运算符的 
+                top: (32px-15px)/2;
+            }
+        }
+        .bottom {
+            a {
+                width: 50%;
+                display: block;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//  约束 最小的宽度
+.index-layout{
+    //  320比较合适 目前 较小的 视网膜屏幕的css像素 iphone5 
+    //  早几年 一般设置的是 280
+    // 现在 还有 屏幕宽度比 320的 用户 一般是 舍不得换手机的用户 手机都不舍得换 我们就不要指望他能够充钱 指纹字符等等 放弃即可
+    min-width: 320px;
+    // 一般是 640； 
+    max-width: 640px;
+
+    // 居中
+    margin: 0 auto;
+
+    //  直接写在这里 考虑可读性
+    header{
+        position:fixed;
+        z-index: 998;
+        width: 100%;
+        max-width: 640px;
+        min-width: 320px;
+    }
+} 

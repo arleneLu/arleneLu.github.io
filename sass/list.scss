@@ -1,0 +1,160 @@
+//  引入 scss
+@import 'normalize.scss';
+@import 'base.scss';
+// 设置 header的样式
+header {
+    height: 45px;
+    background-image: linear-gradient(to bottom, white, rgba(128, 128, 128, 0.5));
+    display: flex;
+    align-items: center;
+    a {
+        background-size: 200px 200px;
+        width: 60px;
+        // (45 - 20) /2
+        padding: 12.5px 20px;
+        height: 45px;
+        background-image: url('../images/sprites.png');
+        background-repeat: no-repeat;
+        //  背景图片 从内容部分开始
+        background-origin: content-box;
+        // 内容之外的 背景图片 都干掉
+        background-clip: content-box; 
+    }
+    a.back {
+        background-position: -20px 0;
+    }
+    a.menu {
+        background-position: -60px 0;
+    }
+    input {
+        flex: 1;
+        height: 30px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px hotpink;
+    }
+}
+
+//  内容部分的布局
+.list-content{
+  display: flex;
+  .left{
+    width: 90px;
+    // background-color: yellowgreen;
+    ul{
+      li{
+        a{
+          height: 50px;
+          display: block;
+          text-align: center;
+          line-height: 50px;
+          border-bottom: 1px solid #000;
+          border-right: 1px solid #000;
+          font-size:14px;
+          color:gray;
+        }
+        a.current{
+          color:$jdRed; 
+          border-right: none;
+        }
+      }
+    }
+  }
+  .right{
+    flex:1;
+    // background-color: greenyellow;
+    padding: 10px;
+    .banner{
+      width: 100%;
+      display: block;
+      img{
+        width: 100%;
+        display: block;
+      }
+    }
+    h3{
+      font-size:14px;
+      padding: 10px 0;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 33.3333%;
+        a{
+          display: block;
+          width: 100%;
+          img{
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+          }
+          p{
+            text-align: center;
+            color:#666666;
+            font-size:12px;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+} 
+
+//  最外层的盒子
+.list-layout{
+  max-width: 640px;
+  min-width:320px;
+  margin: 0 auto;
+}
+
+// 防止 内容 可以整页 滚动
+html,body,.list-layout{
+  height: 100%;
+} 
+.list-layout{
+  overflow: hidden;
+}
+// overscroll 可以实现 分开滚动 但是 效果 并不好看
+// overscroll 实现滚动 需要保证 容器 比内容要小即可
+// 1.滚动条
+// 2.上下 还想多拉一点 并没有 弹性效果
+.list-content{
+  .left{
+    // overflow: scroll;
+  }
+  .right{
+    // overflow: scroll;
+  }
+}
+//  设置 内容部分 使用剩余的高度
+//  header部分 高度 固定不变
+.list-layout{
+  display: flex;
+  flex-direction: column;
+  .list-content{
+    flex:1;
+  }
+} 
+//  设置 slide的高度 是 auto  让他可以进行滚动
+.swiper-slide{
+  // 这段代码 是在 swiper案例中看到的
+  // 原理是 如果要实现滚动 内容 需要比 容器的 高度 要大 
+  height: auto;
+} 
+
+// 设置层级 避免覆盖问题
+header{
+  z-index:999;
+} 
+
+// 设置 溢出隐藏
+.left{
+  overflow: hidden;
+}
+
+// 去除 手指 触摸 高亮效果
+// 一般是写在base中
+a{
+  // -webkit-tap-highlight-color:hotpink;
+  -webkit-tap-highlight-color:transparent;
+}

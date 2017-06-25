@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>title</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+  <!-- 最外层的容器 -->
+  <div class="index-layout">
+    <!-- 顶部 -->
+    <header>
+      <!--a[href='javascript:void(0)'].logo+input[type='search']+a[href='javascript:void(0)'].login-->
+      <a href="javascript:void(0)" class="logo"></a>
+      <span class='glass'></span>
+      <input type="search" placeholder="请输入搜索的内容哦">
+      <a href="javascript:void(0)" class="login">登录</a>
+    </header>
+
+    <!-- 轮播图 -->
+    <!--ul>li*8>a[href='javascript:void(0)']>img[src='images/l$.jpg']-->
+    <div class="index-banner">
+      <!-- 轮播图片 -->
+      <ul class='banner-imgs clearfix'>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l1.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l2.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l3.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l4.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l5.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l6.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l7.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"><img src="images/l8.jpg" alt=""></a>
+        </li>
+      </ul>
+
+      <!--  轮播的小圆点 -->
+      <!--ol.clearfix>li.fl*8-->
+      <ol class="clearfix">
+        <li class="fl current"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+        <li class="fl"></li>
+      </ol>
+    </div>
+
+    <!-- 导航区域 -->
+    <!--.index-nav>ul>li*8>a[href='javascript:void(0)']>img[src='images/nav$.png']+p{分类查询}-->
+    <div class="index-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav0.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav1.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav2.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav3.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav4.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav5.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav6.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <img src="images/nav7.png" alt="">
+            <p>分类查询</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!--  内容区域 -->
+    <div class="index-main">
+      <!-- 秒杀区域 -->
+      <section class='secondKill'>
+
+        <div class="top">
+          <div class="secKill-left">
+            <span class='clock'></span>
+            <span class='handSecKill'>掌上秒杀</span>
+            <ul>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+              <li>:</li>
+              <li>0</li>
+              <li>0</li>
+            </ul>
+          </div>
+          <div class="secKill-right">
+            <a href="javascript:void(0)">更多&gt;</a>
+          </div>
+        </div>
+        <!-- 底部布局 -->
+        <div class="bottom">
+          <!--ul>li*3>a[href='javascript:void(0)']>img[src='images/detail01.jpg']+^(p{￥10.00}+p{￥100.00})-->
+          <ul>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail02.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+            <li>
+              <a href="javascript:void(0)"><img src="images/detail01.jpg" alt=""></a>
+              <p>￥10.00</p>
+              <p>￥100.00</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 除了秒杀区域之外的 部分 -->
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+          <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br'  href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+            <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fr bl'  href="javascript:void(0)"><img src="images/cp4.jpg" alt=""></a>
+          <a class='fl bb' href="javascript:void(0)"><img src="images/cp5.jpg" alt=""></a>
+          <a class='fl' href="javascript:void(0)"><img src="images/cp6.jpg" alt=""></a>
+        </div>
+      </section>
+      <section>
+        <div class="top">
+          <h3>京东超市</h3>
+        </div>
+        <div class="bottom clearfix">
+            <!--a[href='javascript:void(0)']*3>img[src='images/cp$.jpg']-->
+          <a class='fl br'  href="javascript:void(0)"><img src="images/cp1.jpg" alt=""></a>
+          <a class='fr bb' href="javascript:void(0)"><img src="images/cp2.jpg" alt=""></a>
+          <a class='fr' href="javascript:void(0)"><img src="images/cp3.jpg" alt=""></a>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<!-- 导入 js -->
+<script type="text/javascript" src="js/index.js"></script>
